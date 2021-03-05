@@ -11,9 +11,24 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 
 // BANNER
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -21,11 +36,13 @@
 }
 
 .banner h1 {
-  margin: 0;
+  max-resolution: 10px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  font-family: 'Fascinate', cursive;
+  margin-bottom: 18px;
 }
 
 .banner p {
@@ -92,6 +109,22 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-top: 60px;
+}
+
+.btn-ghost {
+  color: white;
+  font-size: x-large;
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: white;
 }
 
 // Smallest device

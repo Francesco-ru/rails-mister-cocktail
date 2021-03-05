@@ -1,14 +1,8 @@
-<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.pixabay.com/photo/2020/01/24/09/23/bar-4789760_1280.jpg);">
-  <div class="container" style='text-align: center'>
-    <h1>MR <strong>Cocktails</strong></h1>
-  </div>
-</div> -->
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.pixabay.com/photo/2020/01/24/09/23/bar-4789760_1280.jpg); object-fit: cover; object-position: center;">
   <div class="banner-content" style='text-align: center'>
-    <h1>MR <strong>Cocktails</strong></h1>
-    <p>Best cocktails</p>
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+    <h1>MR Cocktails</h1>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-ghost" %>
   </div>
 </div>
 
@@ -19,7 +13,7 @@
     <% if cocktail.photo.attached? %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>)">
     <% else %>
-      <div class="card-category">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://previews.123rf.com/images/polyudova/polyudova1704/polyudova170400064/77028714-alcoholic-cocktail-hand-drawn-vector-illustration-vintage-cocktail-icon-with-ice-and-leaves-of-mint-.jpg)">
     <% end %>
         <h2 class='cocktail_name'><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h2>
       </div>
