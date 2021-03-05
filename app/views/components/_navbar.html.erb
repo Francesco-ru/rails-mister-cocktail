@@ -1,10 +1,10 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" href="#"><%= link_to 'MR Cocktails', cocktails_path %></a>
+  <a class="navbar-brand" href="#"><%= link_to '<i class="fas fa-cocktail" style="color: yellow;"></i>'.html_safe, cocktails_path %></a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-direction: row-reverse;">
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form action='/search' class="form-inline my-2 my-lg-0">
+      <input name='query' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     </form>
   </div>
 </nav>
