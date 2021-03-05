@@ -3,6 +3,9 @@
   <div class='title'>
   <h2 style='font-style: italic; margin-bottom: 85px; color: seashell; font-size: xxx-large; font-family: initial;'><%= @cocktail.name %></h2>
   </div>
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag @cocktail.photo.key, crop: :fill, style: "max-width: 350px; margin-bottom: 30px;" %>
+  <% end %>
     <div class="row w-50 mx-auto mt-2 p-2 align-items-center">
     <div class="col-sm">
       <span>Dose</span>
